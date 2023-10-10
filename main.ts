@@ -15,43 +15,43 @@ basic.showIcon(IconNames.Happy)
 input.onGesture(Gesture.Shake, function () {
   randomNumber = randint(0, 2)
   basic.clearScreen()
-  
-  if (randomNumber == 0) {
+
+  if (randomNumber === 0) {
     images.createImage(`
       . . . . .
       . # # # .
       . # # # .
       . # # # .
       . . . . .
-    `).showImage(0);
+    `).showImage(0)
     basic.pause(2000)
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
-    }
-    if (randomNumber == 1){
-      images.createImage(`
+  }
+  if (randomNumber === 1) {
+    images.createImage(`
       # # # # #
       # . . . #
       # . . . #
       # . . . #
       # # # # #
-    `).showImage(0);
+    `).showImage(0)
     basic.pause(2000)
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
-    }
-    if (randomNumber == 2) {
-      images.createImage(`
+  }
+  if (randomNumber === 2) {
+    images.createImage(`
       # # . . #
       # # . # .
       . . # . .
       # # . # .
       # # . # #
-    `).showImage(0);    
+    `).showImage(0)
     basic.pause(2000)
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
-    }
+  }
 })
 
 input.onButtonPressed(Button.A, function () {
@@ -60,7 +60,7 @@ input.onButtonPressed(Button.A, function () {
   basic.pause(1000)
   basic.showIcon(IconNames.Happy)
 })
- 
+
 input.onButtonPressed(Button.B, function () {
-  basic.showString("Score : " + (score).toString())
+  basic.showString('Score : ' + (score).toString())
 })
