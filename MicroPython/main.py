@@ -14,19 +14,19 @@ display.clear()
 display.show(Image.HAPPY)
 
 while True:
-    accelerometer.was_gesture('shake')
+    accelerometer.was_gesture("shake")
     random_number = random.randint(1, 2)
-    if (random_number == 0):
+    if random_number == 0:
         display.show(Image("00000:" "09990:" "09990:" "09990:" "00000"))
         sleep(2000)
         display.clear()
         display.show(Image.HAPPY)
-    elif (random_number == 1):
-        display.show(Image( "99999:" "90009:" "90009:" "90009:" "99999"))
+    elif random_number == 1:
+        display.show(Image("99999:" "90009:" "90009:" "90009:" "99999"))
         sleep(2000)
         display.clear()
         display.show(Image.HAPPY)
-    elif (random_number == 2):
+    elif random_number == 2:
         display.show(Image("99009:" "99090:" "00900:" "99090:" "99009"))
         sleep(2000)
         display.clear()
@@ -39,4 +39,5 @@ while True:
         display.show(Image.HAPPY)
     if button_b.was_pressed():
         display.clear()
-        display.show()
+        display.show("Score : " + score)
+        display.show(Image.HAPPY)
