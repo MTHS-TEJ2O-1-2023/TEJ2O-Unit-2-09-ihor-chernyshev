@@ -13,10 +13,10 @@ score = 0
 display.clear()
 display.show(Image.HAPPY)
 
-if accelerometer.was_gesture("shake"):
-    random_number = random.randint(1, 2)
-
 while True:
+    if accelerometer.was_gesture("shake"):
+        random_number = random.randint(0, 2)
+        display.clear()
     if random_number == 0:
         display.show(Image("00000:" "09990:" "09990:" "09990:" "00000"))
         sleep(2000)
@@ -40,5 +40,5 @@ while True:
         display.show(Image.HAPPY)
     if button_b.was_pressed():
         display.clear()
-        display.show("Score : " + score)
+        display.scroll("Score : " + str(score))
         display.show(Image.HAPPY)
