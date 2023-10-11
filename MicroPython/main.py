@@ -15,30 +15,35 @@ display.show(Image.HAPPY)
 
 while True:
     if accelerometer.was_gesture("shake"):
-        random_number = random.randint(0, 2)
+        random_number = random.randint(0, 0)
         display.clear()
-    if random_number == 0:
-        display.show(Image("00000:" "09990:" "09990:" "09990:" "00000"))
-        sleep(2000)
-        display.clear()
-        display.show(Image.HAPPY)
-    elif random_number == 1:
-        display.show(Image("99999:" "90009:" "90009:" "90009:" "99999"))
-        sleep(2000)
-        display.clear()
-        display.show(Image.HAPPY)
-    elif random_number == 2:
-        display.show(Image("99009:" "99090:" "00900:" "99090:" "99009"))
-        sleep(2000)
-        display.clear()
-        display.show(Image.HAPPY)
-    if button_a.was_pressed():
-        display.clear()
-        score = score + 1
-        display.show(Image.YES)
-        sleep(1000)
-        display.show(Image.HAPPY)
-    if button_b.was_pressed():
-        display.clear()
-        display.scroll("Score : " + str(score))
-        display.show(Image.HAPPY)
+
+        if random_number == 0:
+            display.show(Image("00000:" "09990:" "09990:" "09990:" "00000"))
+            sleep(2000)
+            display.clear()
+            display.show(Image.HAPPY)
+
+        elif random_number == 1:
+            display.show(Image("99999:" "90009:" "90009:" "90009:" "99999"))
+            sleep(2000)
+            display.clear()
+            display.show(Image.HAPPY)
+
+        elif random_number == 2:
+            display.show(Image("99009:" "99090:" "00900:" "99090:" "99009"))
+            sleep(2000)
+            display.clear()
+            display.show(Image.HAPPY)
+
+        if button_a.was_pressed():
+            display.clear()
+            score = score + 1
+            display.show(Image.YES)
+            sleep(1)
+            display.show(Image.HAPPY)
+
+        if button_b.was_pressed():
+            display.clear()
+            display.scroll("Score : " + str(score))
+            display.show(Image.HAPPY)
