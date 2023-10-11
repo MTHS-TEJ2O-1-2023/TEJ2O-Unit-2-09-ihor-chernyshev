@@ -46,7 +46,7 @@ input.onGesture(Gesture.Shake, function () {
       # # . # .
       . . # . .
       # # . # .
-      # # . # #
+      # # . . #
     `).showImage(0)
     basic.pause(2000)
     basic.clearScreen()
